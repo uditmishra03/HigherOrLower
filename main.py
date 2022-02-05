@@ -82,7 +82,7 @@ def game():
     else:
       game_over= True
   clear_and_display_logo()
-  print (f"Sorry that's wrong, Final score: {score}")
+  print (f"Sorry, that's wrong, Final score: {score}")
 
 #if answer is incorrect, end the game and print the score of user so far. 
 
