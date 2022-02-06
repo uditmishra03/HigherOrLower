@@ -10,6 +10,8 @@ import replit
 #choose two random integer within range of 1 to 50
 option_a= randint(0, 50)
 option_b= randint(0, 50)
+if option_a== option_b:
+  option_b= randint(0, 50)
 # print (option_a)
 # print (option_b)
 def clear_and_display_logo():
@@ -74,11 +76,13 @@ def game():
       score += 1
       item_a=item_b
       item_b= display_item(randint(0,50))
+      while item_a == item_b:
+        item_b = display_item(randint(0,50))
       print(f" after a guess: {item_b}")
       clear_and_display_logo()
       print (f"You're right, current score: {score}")
       display_accounts(item_a, item_b)
-      # return game_continues
+      # return game_continues.
     else:
       game_over= True
   clear_and_display_logo()
